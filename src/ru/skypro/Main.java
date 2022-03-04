@@ -53,10 +53,33 @@ public class Main {
         int takesItDaysLoseWeight = boxerNeedsToLoseWeightGr/ losesBoxerInOneDayWeightGr;
         System.out.println("Боксёру нужно " + takesItDaysLoseWeight + " дней чтобы похудеть на 7 кг по 500 гр в день");
 
-        int onAvarage = (itTakesDaysLoseWeight + takesItDaysLoseWeight) / 2;
+        int onAvarage = (itTakesDaysLoseWeight + takesItDaysLoseWeight) % boxerNeedsToLoseWeightGr / 2;
         System.out.println("В среднем потребуется " + onAvarage + " дней для похудения на 7 кг!");
 
         // Задание 5
+        int mashasMonthlySalary = 67_760;
+        int denisMonthlySalary = 83_690;
+        int kristinaMonthlySalary = 76_230;
+        int inOneYearMonths = 12;
+        int mashasAnnualSalary = mashasMonthlySalary * inOneYearMonths;
+        int denisAnnualSalary = denisMonthlySalary * inOneYearMonths;
+        int kristinasAnnualSalary = kristinaMonthlySalary * inOneYearMonths;
+        int addedPercentOfSalary = 10;
+        int mashasSalaryHasBeenIncreased = mashasMonthlySalary * addedPercentOfSalary / 100;
+        int mashasNewMonthlySalary = mashasMonthlySalary + mashasSalaryHasBeenIncreased;
+        int denisSalaryHasBeenIncreased = denisMonthlySalary * addedPercentOfSalary / 100;
+        int denisNewMonthlySalary = denisMonthlySalary + denisSalaryHasBeenIncreased;
+        int kristinaSalaryHasBeenIncreased = kristinaMonthlySalary * addedPercentOfSalary / 100;
+        int kristinaNewMonthlySalary = kristinaMonthlySalary + kristinaSalaryHasBeenIncreased;
+        int mashasNewAnnualSalary = mashasNewMonthlySalary * inOneYearMonths;
+        int denisNewAnnualSalary = denisNewMonthlySalary * inOneYearMonths;
+        int kristinasNewAnnualSalary = kristinaNewMonthlySalary * inOneYearMonths;
+        int mashasAnnualSalaryDifference = mashasNewAnnualSalary * addedPercentOfSalary / 100;
+        int denisAnnualSalaryDifference = denisNewAnnualSalary * addedPercentOfSalary / 100;
+        int kristinasAnnualSalaryDifference = kristinasNewAnnualSalary * addedPercentOfSalary / 100;
 
+        System.out.println("Маша теперь получает " + mashasNewMonthlySalary + " рублей годовой доход вырос на " + mashasAnnualSalaryDifference + " рублей");
+        System.out.println("Денис теперь получает " + denisNewMonthlySalary + " рублей годовой доход вырос на " + denisAnnualSalaryDifference + " рублей");
+        System.out.println("Кристина теперь получает " + kristinaNewMonthlySalary + " рублей годовой доход вырос на " + kristinasAnnualSalaryDifference + " рублей");
     }
 }
